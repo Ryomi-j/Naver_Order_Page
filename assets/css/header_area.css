@@ -1,0 +1,9 @@
+#place_header {
+  display: flex;
+}
+#place_header #store_title::before {
+  content: "";
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  height: 100%;
+}

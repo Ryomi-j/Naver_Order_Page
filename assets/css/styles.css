@@ -124,6 +124,50 @@ textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 10px;
+  font-size: 15px;
+}
+header .header_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+header .header_item #back_icon {
+  width: 20px;
+}
+header .header_item #store_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #242424;
+}
+header .header_item #order_list {
+  font-weight: bold;
+  color: #666;
+}
+header .header_item #my_place_page {
+  position: relative;
+}
+header .header_item #profileIMG {
+  width: 32px;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: 0.7;
+  background-color: rgb(205, 248, 234);
+  margin-top: 5px;
+}
+header .header_item #my_place {
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  font-size: 8px;
+  font-weight: bold;
+}
+
 #order_type_wrap {
   position: absolute;
   width: 100%;
