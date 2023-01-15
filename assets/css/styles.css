@@ -124,18 +124,46 @@ textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+.screen-out {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
-  margin: 0 10px 0 10px;
+  height: 95px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   font-size: 15px;
 }
 header .header_item {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 6px;
+  text-align: center;
+}
+header .header_item #page_back {
+  display: block;
+  width: 45px;
 }
 header .header_item #back_icon {
   width: 20px;
@@ -144,13 +172,20 @@ header .header_item #store_title {
   font-size: 20px;
   font-weight: bold;
   color: #242424;
+  padding-right: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 header .header_item #order_list {
   font-weight: bold;
   color: #666;
+  width: 70px;
 }
 header .header_item #my_place_page {
   position: relative;
+  height: 50px;
+  padding-top: 4.5px;
 }
 header .header_item #profileIMG {
   width: 32px;
@@ -158,14 +193,27 @@ header .header_item #profileIMG {
   border-radius: 50%;
   opacity: 0.7;
   background-color: rgb(205, 248, 234);
-  margin-top: 5px;
+  padding: 2px;
+  margin: 6px 15px 0 0;
 }
 header .header_item #my_place {
   position: absolute;
-  top: -1px;
   left: 20px;
   font-size: 8px;
   font-weight: bold;
+}
+header .header_item_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+header .header_item_banner_list {
+  display: block;
+  width: 64px;
+  height: 45px;
+  padding: 0 12px;
+  text-align: center;
 }
 
 #order_type_wrap {
