@@ -1,11 +1,13 @@
-@import './base/reset';
-@import './base/preset';
 @import './abstracts/variables';
 @import './abstracts/variables_color';
+@import './base/reset';
+@import './base/preset';
 
 
 @import './abstracts/mixin_common';
 
+@import './components/order_type_select_popup';
 @import './components/header_area';
 @import './components/order_type_select';
+
 

@@ -6,6 +6,7 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f9;
 }
 
 body,
@@ -145,96 +146,6 @@ textarea::-webkit-outer-spin-button {
   display: none;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  height: 95px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-size: 15px;
-}
-header .header_item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-header .header_item #page_back {
-  display: block;
-  width: 45px;
-}
-header .header_item #back_icon {
-  width: 20px;
-}
-header .header_item #store_title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #242424;
-  padding-right: 6px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-header .header_item #order_list {
-  font-weight: bold;
-  color: #666;
-  width: 70px;
-}
-header .header_item #my_place_page {
-  position: relative;
-  height: 50px;
-  padding-top: 4.5px;
-}
-header .header_item #profileIMG {
-  width: 32px;
-  border: 1px solid black;
-  border-radius: 50%;
-  opacity: 0.7;
-  background-color: rgb(205, 248, 234);
-  padding: 2px;
-  margin: 6px 15px 0 0;
-}
-header .header_item #my_place {
-  position: absolute;
-  left: 20px;
-  font-size: 8px;
-  font-weight: bold;
-}
-header .header_item_banner {
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-  vertical-align: top;
-  line-height: 20px;
-}
-header .header_item_banner .header_item_banner_list {
-  flex: 1;
-  padding: 0 12px;
-  text-align: center;
-  font-size: 18px;
-  padding: 13px 13px;
-  color: #8f8f8f;
-}
-header .header_item_banner .header_item_banner_list.selected_banner {
-  color: #000;
-  font-weight: bold;
-}
-header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: black;
-}
-header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item {
-  position: relative;
-  display: inline-block;
-}
-
 #order_type_wrap {
   position: absolute;
   width: 100%;
@@ -302,4 +213,180 @@ header .header_item_banner .header_item_banner_list.selected_banner #selected_ba
   background-color: #424242;
   width: 68px;
   border-radius: 28px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 95px;
+  background-color: white;
+  margin-bottom: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 15px;
+  z-index: 5000;
+}
+header .header_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+header .header_item #page_back {
+  display: block;
+  width: 45px;
+}
+header .header_item #back_icon {
+  width: 20px;
+}
+header .header_item #store_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #242424;
+  padding-right: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+header .header_item #order_list {
+  font-weight: bold;
+  color: #666;
+  width: 70px;
+}
+header .header_item #my_place_page {
+  position: relative;
+  height: 50px;
+  padding-top: 4.5px;
+}
+header .header_item #profileIMG {
+  width: 32px;
+  border: 1px solid rgb(184, 243, 224);
+  border-radius: 50%;
+  opacity: 0.7;
+  background-color: rgb(205, 248, 234);
+  padding: 2px;
+  margin: 6px 15px 0 0;
+}
+header .header_item #my_place {
+  position: absolute;
+  left: 20px;
+  font-size: 8px;
+  font-weight: bold;
+}
+header .header_item_banner {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  vertical-align: top;
+  line-height: 20px;
+}
+header .header_item_banner .header_item_banner_list {
+  flex: 1;
+  padding: 0 12px;
+  text-align: center;
+  font-size: 18px;
+  padding: 13px 13px;
+  color: #8f8f8f;
+}
+header .header_item_banner .header_item_banner_list.selected_banner {
+  color: #000;
+  font-weight: bold;
+}
+header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+}
+header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item {
+  position: relative;
+  display: inline-block;
+}
+
+#order_type_slt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 97px;
+  padding: 10px 18px 20px;
+  width: 100%;
+  height: 195px;
+  background-color: #e7f7ff;
+}
+#order_type_slt .order_img_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  color: #333;
+}
+#order_type_slt .order_img_list .order_img_item {
+  display: flex;
+  font-weight: bold;
+}
+#order_type_slt .order_img_list .order_img_item .NAVER-logo {
+  width: 24px;
+  margin-right: 10px;
+}
+#order_type_slt .order_img_list .order_img_item #store_img {
+  width: 28px;
+}
+#order_type_slt .order_img_list .order_img_item #dish_img {
+  width: 30px;
+}
+#order_type_slt .order_type_list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+#order_type_slt .order_type_list .order_type_item {
+  flex: 1;
+  padding: 11px 0 8px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  color: #666;
+  font-weight: bold;
+}
+#order_type_slt .order_type_list .order_type_item img {
+  width: 18px;
+}
+#order_type_slt .order_type_list .order_type_item.selected_order_type {
+  position: relative;
+  flex-grow: 1.2;
+  border: 1px solid #333;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}
+#order_type_slt .order_type_list .order_type_item.selected_order_type::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+  transform: rotate(45deg) translateX(-50%);
+}
+#order_type_slt .is_order_possible .order_possible {
+  border-radius: 2px;
+  display: none;
+  background-color: #fff;
+  box-shadow: 1px 1px #dceff8;
+}
+#order_type_slt .is_order_possible .order_possible.selected_order_type_content {
+  display: block;
+  z-index: 10;
+  margin-top: 10px;
+  padding: 13px 15px 11px;
 }
