@@ -9,22 +9,22 @@ header {
   width: 100%;
   // margin: 0 10px 0 10px;
   font-size: 15px;
-  
+
   .header_item {
     flex: 1;
     display: flex;
     align-items: center;
     text-align: center;
-    
+
     #page_back {
       display: block;
       width: 45px;
     }
-    
+
     #back_icon {
       width: 20px;
     }
-    
+
     #store_title {
       font-size: 20px;
       font-weight: bold;
@@ -42,7 +42,7 @@ header {
     #my_place_page {
       position: relative;
       height: 50px;
-      padding-top:4.5px ;
+      padding-top: 4.5px;
     }
 
     #profileIMG {
@@ -65,16 +65,39 @@ header {
 
   .header_item_banner {
     display: flex;
+    // justify-content: space-between;
     align-items: center;
-    justify-content: center;
     padding: 0 8px;
-  }
+    vertical-align: top;
+    line-height: 20px;
+    
+    .header_item_banner_list {
+      flex: 1;
 
-  .header_item_banner_list {
-    display: block;
-    width: 64px;
-    height: 45px;
-    padding: 0 12px;
-    text-align: center;
+      padding: 0 12px;
+      text-align: center;
+      font-size: 18px;
+      padding: 13px 13px;
+      color: $booking-color-text5;
+
+      &.selected_banner {
+        color: $booking-color-text1;
+        font-weight: bold;
+        #selected_banner_item::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-color: black;
+        }
+
+        #selected_banner_item {
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
   }
 }

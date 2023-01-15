@@ -205,15 +205,34 @@ header .header_item #my_place {
 header .header_item_banner {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0 8px;
+  vertical-align: top;
+  line-height: 20px;
 }
-header .header_item_banner_list {
-  display: block;
-  width: 64px;
-  height: 45px;
+header .header_item_banner .header_item_banner_list {
+  flex: 1;
   padding: 0 12px;
   text-align: center;
+  font-size: 18px;
+  padding: 13px 13px;
+  color: #8f8f8f;
+}
+header .header_item_banner .header_item_banner_list.selected_banner {
+  color: #000;
+  font-weight: bold;
+}
+header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+}
+header .header_item_banner .header_item_banner_list.selected_banner #selected_banner_item {
+  position: relative;
+  display: inline-block;
 }
 
 #order_type_wrap {
